@@ -99,7 +99,9 @@ static void mqtt_app_start(void)
     const esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = CONFIG_BROKER_URI,
         .broker.verification.certificate = (const char *)mqtt_eclipseprojects_io_pem_start,
-        .credentials.client_id = (const char *)CLIENT_ID,
+        .credentials.client_id = CLIENT_ID,
+        .credentials.username = "PNK_01",
+        .credentials.authentication.password = "123456",
     };
 
     ESP_LOGI(TAG, "[APP] Free memory: %" PRIu32 " bytes", esp_get_free_heap_size());
