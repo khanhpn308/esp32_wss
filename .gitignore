@@ -88,3 +88,4 @@ dependencies.lock
 .DS_Store
 Thumbs.db
 managed_components/
+.clangd
